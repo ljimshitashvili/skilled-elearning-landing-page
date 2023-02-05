@@ -188,6 +188,44 @@ footer h1{
     }
 
     footer{
-        height: 120px;
+        height: 12px;
     }
+}
+
+/* desktop resolution */
+
+@media (min-width: 1440px){
+    .header, main, footer{
+        padding: 45px 165px;
+    }
+
+    .introduction{
+        display: flex;
+    }
+
+    #hero{
+        width: 400px;
+    }
+
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .check-button{
+        width: 340px;
+        height: 259px;
+    }
+
+    .fieldset{
+        width: 340px;
+        height: 259px;
+    }
+
+    footer{
+        height: 12px;
+    }
+
 }
