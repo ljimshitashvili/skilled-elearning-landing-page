@@ -1,9 +1,10 @@
 body{
     font-family: 'Plus Jakarta Sans', sans-serif;
     background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+    overflow-x: hidden;
 }
 
-header, main, footer{
+header, footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,6 +13,10 @@ header, main, footer{
 
 main{
     flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 16px;
 }
 
 footer{
@@ -52,7 +57,7 @@ h2{
     font-size: 16px;
     line-height: 26px;
     width: 286px;
-    margin: 0 auto 24px auto;
+    margin: 0 auto 24px 28px;
 }
 
 .main{
@@ -80,6 +85,14 @@ footer h1{
     margin-bottom: 80px;
 }
 
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+
 /* buttons */
 
 header button{
@@ -104,7 +117,7 @@ header button{
     font-size: 16px;
     font-weight: 700;
     line-height: 26px;
-    margin-bottom: 46px;
+    margin-bottom: 70px;
 }
 
 .check-button{
@@ -156,10 +169,18 @@ header button{
 }
 
 
+
 /*  tablet resolution */
 
 
 @media (min-width: 768px){
+    body{
+        background-image: url('./resources/starter-code/assets/image-hero-tablet@2x.png');
+        background-size: 700px 700px;
+        background-repeat: no-repeat;
+        background-position: top -70px right -300px;
+    }
+
     header, main, footer{
         padding: 39px;
     }
@@ -169,10 +190,6 @@ header button{
     }
 
     /* div */
-
-    .introduction{
-        display: flex;
-    }
 
     .content{
         display: flex;
@@ -186,11 +203,16 @@ header button{
         height: 259px;
     }
 
+    .txt-container{
+        width: 55%;
+    }
+
     /* img */
 
     #hero{
-        width: 400px;
-    }
+        display: none;
+    }   
+
 
     /* button */
 
@@ -198,13 +220,24 @@ header button{
         width: 340px;
         height: 259px;
     }
+
+    #main-button{
+        margin-bottom: 210px;
+    }
 }
 
 
 /*  desktop resolution  */
 
 
-@media (min-width: 1440px){
+@media (min-width: 1024px){
+    body{
+        background-image: url('./resources/starter-code/assets/image-hero-desktop@2x.png');
+        background-size: 991px 936px;
+        background-repeat: no-repeat;
+        background-position: top -200px right -370px;
+    }
+
     header, main{
         padding: 45px 165px;
     }
@@ -244,6 +277,10 @@ header button{
         height: 259px;
     }
 
+    #main-button{
+        margin-bottom: 250px;
+    }
+
     
 
     /* desktop active */
@@ -263,6 +300,6 @@ header button{
 
     #footer-button:hover{
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                        linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+                    linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
     }
 }
