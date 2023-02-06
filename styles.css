@@ -55,6 +55,12 @@ h2{
     margin: 0 auto 24px auto;
 }
 
+.main{
+    margin-left: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
 footer h1{
     color: white;
     font-weight: 800;
