@@ -3,26 +3,30 @@ body{
     background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
 }
 
-.header, footer{
+header, main, footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
 }
 
-.header h1{
+main{
+    flex-direction: column;
+}
+
+footer{
+    background-color: #13183F;
+    height: 120px;
+}
+
+/* text */
+
+header h1{
     color: #13183F;
     font-weight: 800;
     font-size: 28px;
     line-height: 35px;
     width: 89px;
-}
-
-main{
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 main h1{
@@ -51,15 +55,28 @@ h2{
     margin: 0 auto 24px auto;
 }
 
-.main{
-    margin: unset;
-    margin-bottom: 24px;
-    width: 100%;
+footer h1{
+    color: white;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 35.3px;
+}
+
+/* div */
+
+.fieldset{
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 44px;
+}
+
+#business{
+    margin-bottom: 80px;
 }
 
 /* buttons */
 
-.header button{
+header button{
     color: white;
     background-color: #13183F;
     border: 0;
@@ -99,18 +116,6 @@ h2{
     margin-bottom: 44px;
 }
 
-/* images */
-
-#hero{
-   width: 100%;
-}
-
-.fieldset{
-    background-color: white;
-    border-radius: 10px;
-    margin-bottom: 44px;
-}
-
 .get-started{
     color: #F74780;
     font-weight: 700;
@@ -119,24 +124,6 @@ h2{
     margin: 0 auto 32px 28px;
     border: 0;
     background-color: unset;
-}
-
-.icons{
-    margin-top: -28px;
-    margin-left: 28px;
-}
-
-footer{
-    background-color: #13183F;
-    height: 120px;
-}
-
-footer h1{
-    color: white;
-    font-weight: 800;
-    font-size: 28px;
-    line-height: 35.3px;
-    
 }
 
 #footer-button{
@@ -151,23 +138,34 @@ footer h1{
     height: 48px;
 }
 
-#business{
-    margin-bottom: 80px;
+/* images */
+
+#hero{
+   width: 100%;
 }
 
-/* tablet resolution */
+.icons{
+    margin-top: -28px;
+    margin-left: 28px;
+}
+
+
+/*  tablet resolution */
+
 
 @media (min-width: 768px){
-    .header, main, footer{
+    header, main, footer{
         padding: 39px;
     }
 
-    .introduction{
-        display: flex;
+    footer{
+        padding: 0 39px 0 39px;
     }
 
-    #hero{
-        width: 400px;
+    /* div */
+
+    .introduction{
+        display: flex;
     }
 
     .content{
@@ -177,34 +175,47 @@ footer h1{
         justify-content: center;
     }
 
-    .check-button{
-        width: 340px;
-        height: 259px;
-    }
-
     .fieldset{
         width: 340px;
         height: 259px;
     }
 
-    footer{
-        height: 12px;
+    /* img */
+
+    #hero{
+        width: 400px;
+    }
+
+    /* button */
+
+    .check-button{
+        width: 340px;
+        height: 259px;
     }
 }
 
-/* desktop resolution */
+
+/*  desktop resolution  */
+
 
 @media (min-width: 1440px){
-    .header, main, footer{
+    header, main{
         padding: 45px 165px;
     }
+
+    footer{
+        padding: 0 165px 0 165px;
+    }
+
+    /* div */
 
     .introduction{
         display: flex;
     }
 
-    #hero{
-        width: 400px;
+    .fieldset{
+        width: 340px;
+        height: 259px;
     }
 
     .content{
@@ -214,18 +225,38 @@ footer h1{
         justify-content: center;
     }
 
+    /* img */
+
+    #hero{
+        width: 400px;
+    }
+
+    /* button */
+
     .check-button{
         width: 340px;
         height: 259px;
     }
 
-    .fieldset{
-        width: 340px;
-        height: 259px;
+    
+
+    /* desktop active */
+
+    header button:hover{
+        background-color: #666CA3;
     }
 
-    footer{
-        height: 12px;
+    #main-button:hover{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                    linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
     }
 
+    .get-started:hover{
+        color: #FFA7C3;
+    }
+
+    #footer-button:hover{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                        linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+    }
 }
